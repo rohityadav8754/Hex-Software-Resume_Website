@@ -1,0 +1,243 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: linear-gradient(135deg, #2C3E50, #16A085);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header ul li a:hover {
+    color: #E74C3C;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+#hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: fadeIn 3s ease-in-out;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-top: 20px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+/* Mission Section */
+#mission {
+    padding: 50px;
+    background: #F39C12;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.5s ease-out;
+}
+
+#mission h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#mission p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Programs Section */
+#programs {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#programs h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2C3E50;
+    text-transform: uppercase;
+}
+
+.programs-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.program {
+    background: linear-gradient(135deg, #E74C3C, #F39C12);
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.program h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.program p {
+    font-size: 18px;
+}
+
+/* Donate Section */
+#donate {
+    padding: 50px;
+    text-align: center;
+    background: #2C3E50;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#donate h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#donate p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#donateBtn {
+    background: #E74C3C;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#donateBtn:hover {
+    background: #16A085;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .programs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #hero h2 {
+        font-size: 36px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+}
